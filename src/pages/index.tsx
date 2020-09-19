@@ -1,4 +1,5 @@
 import * as React from "react"
+import { ThemeProvider } from "theme-ui"
 
-const Component = () => <div>I'm done with the first step.</div>
+const Component = () => <button type="button">hello</button>
 export default Component
