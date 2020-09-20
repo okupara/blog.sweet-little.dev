@@ -1,10 +1,9 @@
 /** @jsx jsx */
-import { jsx, Grid } from "theme-ui"
+import { jsx, Grid, Text } from "theme-ui"
 import * as React from "react"
 import * as Article from "../../models/Article"
 import * as HomeArticle from "./HomeArticle"
-import { Header } from "../Header"
-import { Footer } from "../Footer"
+import { BaseLayout } from "../BaseLayout"
 
 type Props = {
   articles: readonly Article.Model[]
@@ -12,18 +11,21 @@ type Props = {
 
 const Component = ({ articles }: Props) => {
   return (
-    <React.Fragment>
-      <Header />
-      <Grid gap={2} as="article">
-        {articles.map((article) => (
-          <HomeArticle.Article>
-            <HomeArticle.Title>{article.title}</HomeArticle.Title>
-            <HomeArticle.Created>{article.created}</HomeArticle.Created>
-          </HomeArticle.Article>
-        ))}
+    <BaseLayout>
+      <Grid gap={3} as="article">
+        {articles.map((article) => {
+          const created = article.created
+          return (
+            <HomeArticle.Article>
+              <HomeArticle.Title>{article.title}</HomeArticle.Title>
+              <HomeArticle.Created>
+                <Text>{`${created.date}/${created.month}/${created.year}`}</Text>
+              </HomeArticle.Created>
+            </HomeArticle.Article>
+          )
+        })}
       </Grid>
-      <Footer />
-    </React.Fragment>
+    </BaseLayout>
   )
 }
 

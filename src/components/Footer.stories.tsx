@@ -1,10 +1,10 @@
 import * as React from "react"
 import { Footer } from "./Footer"
-import { BlogThemeDecrator } from "./BlogThemeDecorator"
+import { Decorators } from "./BlogDecorator"
 
 export const footer = () => <Footer />
 
 export default {
   title: "Blog/Footer",
-  decorators: [BlogThemeDecrator],
+  decorators: Decorators,
 }

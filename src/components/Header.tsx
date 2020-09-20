@@ -1,13 +1,19 @@
 import * as React from "react"
-import { Box, Flex, Heading, IconButton } from "theme-ui"
+import { Box, Flex, IconButton, Image } from "theme-ui"
 import { Twitter } from "./icons/Twitter"
 import { Github } from "./icons/Github"
 
 function Component() {
   return (
-    <Flex sx={{ alignItems: "center", justifyContent: "space-between" }}>
-      <Box>
-        <Heading>blog.okupara</Heading>
+    <Flex
+      sx={{
+        alignItems: "center",
+        alignContent: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <Box sx={{ lineHeight: "0.8rem" }}>
+        <Image src="/logo.png" sx={{ height: "48px" }} />
       </Box>
       <Flex sx={{ alignItems: "center" }}>
         <Box sx={{ height: "32px", width: "32px" }}>
