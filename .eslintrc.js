@@ -12,7 +12,12 @@ module.exports = {
     "prettier/@typescript-eslint",
     "prettier/react",
   ],
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "emotion", "@typescript-eslint"],
   parser: "@typescript-eslint/parser",
-  rules: {},
+  rules: {
+    "@typescript-eslint/no-unused-vars": [
+      2,
+      { vars: "all", args: "all", varsIgnorePattern: "^jsx$" },
+    ],
+  },
 }
