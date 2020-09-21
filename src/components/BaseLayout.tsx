@@ -1,12 +1,14 @@
 /** @jsx jsx */
-import { jsx, Box } from "theme-ui"
+import { jsx, Flex, Box } from "theme-ui"
 import { Header } from "./Header"
 import { Footer } from "./Footer"
 
 export const BaseLayout: React.FC = ({ children }) => (
-  <Box p={3}>
+  <Flex p={3} sx={{ flexDirection: "column", minHeight: "100vh" }}>
     <Header />
     <main sx={{ pt: 5 }}>{children}</main>
-    <Footer />
-  </Box>
+    <Box sx={{ marginTop: "auto" }}>
+      <Footer sx={{ marginTop: "auto" }} />
+    </Box>
+  </Flex>
 )
