@@ -5,3 +5,9 @@ declare module "@theme-ui/presets" {
 
   export = presets
 }
+
+// declare module "theme-ui" {
+//   export * from "theme-ui"
+//   const components: Record<string, string>
+//   export const components
+// }

@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/pc0900020002/.nodenv/versions/12.13.1/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add -D @types/@theme-ui_presets
+  /Users/pc0900020002/.nodenv/versions/12.13.1/bin/node /usr/local/Cellar/yarn/1.22.4/libexec/bin/yarn.js add -D @types/@mdx-js__react
 
 PATH: 
   /Users/pc0900020002/.nodenv/versions/12.13.1/bin:/Users/pc0900020002/.nodenv/libexec:/Users/pc0900020002/.nodenv/plugins/node-build/bin:/Users/pc0900020002/.nodenv/shims:/Users/pc0900020002/.nodenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/pc0900020002/.nodenv/shims:/Users/pc0900020002/.nodenv/bin
@@ -35,6 +35,9 @@ npm manifest:
     "author": "okupara <okuharakensuke@gmail.com>",
     "license": "MIT",
     "dependencies": {
+      "@emotion/core": "^10.0.35",
+      "@mdx-js/react": "^1.6.18",
+      "@theme-ui/mdx": "^0.3.0",
       "@theme-ui/presets": "^0.3.0",
       "next": "^9.5.3",
       "react": "^16.13.1",
@@ -56,6 +59,7 @@ npm manifest:
       "eslint": "^7.9.0",
       "eslint-config-prettier": "^6.11.0",
       "eslint-config-recommended": "^4.1.0",
+      "eslint-plugin-emotion": "^10.0.27",
       "eslint-plugin-prettier": "^3.1.4",
       "eslint-plugin-react": "^7.20.6",
       "prettier": "^2.1.2",
@@ -63,7 +67,7 @@ npm manifest:
       "typescript": "^4.0.3"
     },
     "scripts": {
-      "storybook": "start-storybook -p 6006",
+      "storybook": "start-storybook -s ./public -p 6006",
       "build-storybook": "build-storybook",
       "dev": "next dev",
       "tsc": "tsc --noEmit",
@@ -1215,7 +1219,7 @@ Lockfile:
       "@emotion/utils" "0.11.3"
       "@emotion/weak-memoize" "0.2.5"
   
-  "@emotion/core@^10.0.0", "@emotion/core@^10.0.20":
+  "@emotion/core@^10.0.0", "@emotion/core@^10.0.20", "@emotion/core@^10.0.35":
     version "10.0.35"
     resolved "https://registry.yarnpkg.com/@emotion/core/-/core-10.0.35.tgz#513fcf2e22cd4dfe9d3894ed138c9d7a859af9b3"
     integrity sha512-sH++vJCdk025fBlRZSAhkRlSUoqSqgCzYf5fMOmqqi3bM6how+sQpg3hkgJonj8GxXM4WbD7dRO+4tegDB9fUw==
@@ -1410,7 +1414,7 @@ Lockfile:
       unist-builder "2.0.3"
       unist-util-visit "2.0.3"
   
-  "@mdx-js/react@1.6.18", "@mdx-js/react@^1.0.0", "@mdx-js/react@^1.5.1":
+  "@mdx-js/react@1.6.18", "@mdx-js/react@^1.0.0", "@mdx-js/react@^1.5.1", "@mdx-js/react@^1.6.18":
     version "1.6.18"
     resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.6.18.tgz#f83cbb2355de9cf36a213140ce21647da1e34fa7"
     integrity sha512-aFHsZVu7r9WamlP+WO/lyvHHZAubkQjkcRYlvS7fQElypfJvjKdHevjC3xiqlsQpasx/4KqRMoEIb++wNtd+6w==
@@ -5509,6 +5513,11 @@ Lockfile:
     integrity sha512-VsQEr6NH3dj664+EyxJwO4FCYm/00JhYb3Sk3ft8o+fpKuIfQ9TaW6uVUfvwMXHcf/lsnRIoyFPsLMyiWCSL/g==
     dependencies:
       eslint-rule-composer "^0.3.0"
+  
+  eslint-plugin-emotion@^10.0.27:
+    version "10.0.27"
+    resolved "https://registry.yarnpkg.com/eslint-plugin-emotion/-/eslint-plugin-emotion-10.0.27.tgz#577a4265cc679f7bb826437a92fb9d709928e0a7"
+    integrity sha512-0IG9KWmyQTAWZNM4WoGjFbdre1Xq6uMp2jYOSHvh3ZNcDfOjOLXeH3ky1MuWZlbWIHxz/Ed5DMGlJAeKnd26VA==
   
   eslint-plugin-import@^2.14.0:
     version "2.22.0"

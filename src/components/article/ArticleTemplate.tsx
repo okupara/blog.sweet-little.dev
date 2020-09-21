@@ -1,7 +1,12 @@
 import * as React from "react"
+import { BaseLayout } from "../BaseLayout"
 
-function Component() {
-  return <div>footer</div>
+const Component: React.FC = ({ children }) => {
+  return (
+    <BaseLayout>
+      <article>{children}</article>
+    </BaseLayout>
+  )
 }
 
 export const ArticleTemplate = Component
