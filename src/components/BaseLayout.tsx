@@ -4,9 +4,9 @@ import { Header } from "./Header"
 import { Footer } from "./Footer"
 
 export const BaseLayout: React.FC = ({ children }) => (
-  <Flex p={3} sx={{ flexDirection: "column", minHeight: "100vh" }}>
+  <Flex p={2} sx={{ flexDirection: "column", minHeight: "100vh" }}>
     <Header />
-    <main sx={{ pt: 5 }}>{children}</main>
+    <main sx={{ pt: 4, px: 3 }}>{children}</main>
     <Box sx={{ marginTop: "auto" }}>
       <Footer sx={{ marginTop: "auto" }} />
     </Box>

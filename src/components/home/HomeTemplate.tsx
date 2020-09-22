@@ -12,7 +12,7 @@ type Props = {
 const Component = ({ articles }: Props) => {
   return (
     <BaseLayout>
-      <Grid gap={3} as="article">
+      <Grid gap={2} as="article">
         {articles.map((article) => {
           const created = article.date
           return (
