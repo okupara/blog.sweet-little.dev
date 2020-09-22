@@ -1,17 +1,21 @@
 import * as React from "react"
 import { BlogThemeProvider } from "../components/BlogThemeProvider"
-import { ArticleTemplate } from "../components/article/ArticleTemplate"
-import { components } from "theme-ui"
-import { MDXProvider } from "@mdx-js/react"
-import Page from "../../contents/test.mdx"
+import { createIndexPageData } from "../lib/generate"
+import { HomeTemplate } from "../components/home/HomeTemplate"
+import type * as ArticleFileInfo from "../models/ArticleFileInfo"
 
-const Component = () => (
+type Props = {
+  articlesInfo: readonly ArticleFileInfo.Model[]
+}
+
+const Component = (props: Props) => (
   <BlogThemeProvider>
-    <ArticleTemplate>
-      <MDXProvider components={components}>
-        <Page />
-      </MDXProvider>
-    </ArticleTemplate>
+    <HomeTemplate articles={props.articlesInfo} />
   </BlogThemeProvider>
 )
+
+export function getStaticProps() {
+  return { props: { articlesInfo: createIndexPageData() } }
+}
+
 export default Component
