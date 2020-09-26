@@ -3,6 +3,7 @@ import type { GetStaticProps } from "next"
 import { MDXProvider } from "@mdx-js/react"
 import { components } from "theme-ui"
 import { createIndexPageData } from "../../lib/generate"
+import { BaseLayout } from "../../components/BaseLayout"
 
 type Props = {
   id: string
@@ -10,11 +11,11 @@ type Props = {
 function Component(props: Props) {
   const MDXContent = dynamic(() => import(`../../../posts/${props.id}.mdx`))
   return (
-    <div>
+    <BaseLayout>
       <MDXProvider components={components}>
         <MDXContent />
       </MDXProvider>
-    </div>
+    </BaseLayout>
   )
 }
 

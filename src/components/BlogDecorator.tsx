@@ -1,5 +1,5 @@
 import * as React from "react"
-import { BlogThemeProvider } from "./BlogThemeProvider"
+import { BlogThemeProvider } from "../context/BlogThemeProvider"
 import { Global } from "@emotion/core"
 
 const BlogThemeDecrator = (Story: () => JSX.Element) => {
