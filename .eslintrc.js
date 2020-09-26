@@ -19,5 +19,6 @@ module.exports = {
       2,
       { vars: "all", args: "all", varsIgnorePattern: "^jsx$" },
     ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
   },
 }
