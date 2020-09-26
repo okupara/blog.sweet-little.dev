@@ -43,6 +43,9 @@
     "storybook": "start-storybook -s ./public -p 6006",
     "build-storybook": "build-storybook",
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "clean": "rimraf ./.next",
     "tsc": "tsc --noEmit",
     "eslint": "eslint src/**/*"
   }

@@ -17,7 +17,7 @@ const Component = ({ articles }: Props) => {
           const created = article.date
           return (
             <HomeArticle.Article key={article.id}>
-              <HomeArticle.Title>{article.title}</HomeArticle.Title>
+              <HomeArticle.Title id={article.id}>{article.title}</HomeArticle.Title>
               <HomeArticle.Created>
                 <Text>{`${created.date}/${created.month}/${created.year}`}</Text>
               </HomeArticle.Created>
