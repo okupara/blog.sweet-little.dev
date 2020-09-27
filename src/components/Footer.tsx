@@ -8,7 +8,7 @@ function Component() {
         display: "flex",
         flexWrap: "wrap",
         alignItems: "center",
-        pt: 2,
+        mt: 5,
         variant: "styles.footer",
       }}
     >

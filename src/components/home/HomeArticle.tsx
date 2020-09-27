@@ -9,7 +9,7 @@ export type TitleProps = {
   id: string
 }
 export const Title: React.FC<TitleProps> = ({ children, id }) => (
-  <h2 sx={{ mt: 3, mb: 0, color: "text" }}>
+  <h2 sx={{ m: 0, color: "text" }}>
     <Link as={`/posts/${id}`} href="/posts/[id]">
       <a
         sx={{

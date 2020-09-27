@@ -2,6 +2,7 @@ import * as React from "react"
 import { Box, Flex, IconButton, Image } from "theme-ui"
 import { Twitter } from "./icons/Twitter"
 import { Github } from "./icons/Github"
+import Link from "next/link"
 
 function Component() {
   return (
@@ -13,7 +14,11 @@ function Component() {
       }}
     >
       <Box sx={{ lineHeight: "0.8rem" }}>
-        <Image src="/logo.png" sx={{ height: "48px" }} />
+        <Link href="/">
+          <a>
+            <Image src="/logo.png" sx={{ height: "48px" }} />
+          </a>
+        </Link>
       </Box>
       <Flex sx={{ alignItems: "center" }}>
         <Box sx={{ height: "32px", width: "32px" }}>
